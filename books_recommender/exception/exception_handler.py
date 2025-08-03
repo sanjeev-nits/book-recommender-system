@@ -16,6 +16,7 @@ def error_message_detailed(error_message: Exception, error_detail: sys) -> str:
 
 
 class CustomException(Exception):
+    @staticmethod
     def __init__(self, error_message: Exception, error_detail: sys):
         super().__init__(error_message)
         self.error_message = CustomException.error_message_detailed(error_message, error_detail)
